@@ -83,6 +83,7 @@ const Code = () => {
              npm init -y
             </code></pre>
           <h1>Installation </h1>
+           <p> instaling following packages :</p> express <br/>{store.map((item)=><><span key={item.id}>{item.name}</span><br/></>)}
           <pre className="language-js"
           ><code>{"// put command in Terminal"}<br/><br/>
               npm i express{store.map((item) =>
