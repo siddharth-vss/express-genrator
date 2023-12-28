@@ -27,6 +27,8 @@ body{
 }
 
 .main{
+  width: calc(var(--h) - 4vw);
+  /* width: 95vw; */
   position: relative;
    top : 50px;
    left: 2vw;
