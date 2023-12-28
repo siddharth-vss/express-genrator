@@ -19,10 +19,10 @@ body{
   height: calc(var(--h) - 2vh);
 }
 .codejs{
-  background-color: var(--code-bg);
+  /* background-color: var(--code-bg);
   border-radius: 10px;
-  width: calc(var(--w) - 2vw);
-  height: calc(var(--h) - 2vh);
+  width: calc(var(--w) + 100% );
+  height: calc(var(--h) - 2vh); */
   color: #ffffff;
 }
 

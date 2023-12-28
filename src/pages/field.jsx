@@ -41,28 +41,26 @@ const navigate = useNavigate();
     <>
       <div className="container">
         <div className='d-flex'>
-        <Formio  type={"checkbox"} name={"multer"}   onChange={checkHandeler}  id={"multer"}  label={"multer"} />
-          <Formio  type={"checkbox"} name={"mongoose"}   onChange={checkHandeler}  id={"mongoose"}  label={"Mongoose"} />
-          <Formio  type={"checkbox"} name={"dotenv"}   onChange={checkHandeler}  id={"dotenv"}  label={"Dotenv"} />
-          
-        
         <Formio  type={"checkbox"} name={"bcryptjs"}   onChange={checkHandeler}  id={"bcryptjs"}  label={"Bcryptjs"} />
         <Formio  type={"checkbox"} name={"body-parser"}   onChange={checkHandeler}  id={"body-parser"}  label={"Body-parser"} />
         <Formio  type={"checkbox"} name={"colors"}   onChange={checkHandeler}  id={"colors"}  label={"Colors"} />
+          
         
+        <Formio  type={"checkbox"} name={"concurrently"}   onChange={checkHandeler}  id={"concurrently"}  label={"concurrently"} />
         <Formio  type={"checkbox"} name={"cookie-parser"}   onChange={checkHandeler}  id={"cookie-parser"}  label={"cookie-parser"} />
         <Formio  type={"checkbox"} name={"cors"}  id={"cors"}   onChange={checkHandeler}  label={"Cors"} />
+        
+        <Formio  type={"checkbox"} name={"dotenv"}   onChange={checkHandeler}  id={"dotenv"}  label={"Dotenv"} />
         <Formio  type={"checkbox"} name={"express-validator"}   onChange={checkHandeler}   id={"express-validator"}  label={"Express-validator"} />
-       
         <Formio  type={"checkbox"} name={"jsonwebtoken"}   onChange={checkHandeler}  id={"jsonwebtoken"}  label={"jwt"} />
-        <Formio  type={"checkbox"} name={"concurrently"}   onChange={checkHandeler}  id={"concurrently"}  label={"concurrently"} />
+       
+        <Formio  type={"checkbox"} name={"mongoose"}   onChange={checkHandeler}  id={"mongoose"}  label={"Mongoose"} />
+        <Formio  type={"checkbox"} name={"multer"}   onChange={checkHandeler}  id={"multer"}  label={"multer"} />
         <Formio  type={"checkbox"} name={"nodemon"}   onChange={checkHandeler}  id={"nodemon"}  label={"nodemon"} />
         
         
         
         </div>
-      
-   
        <button onClick={ ()=>{
         navigate('/code');
        } }>Genrate express code</button>
