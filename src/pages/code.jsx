@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { useSelector } from 'react-redux'
-
+import { useSelector ,useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { removePackage } from '../slice/packege'
 
 const Code = () => {
   const store = useSelector((State) => State.Packages);
@@ -13,25 +14,34 @@ const Code = () => {
   // console.log(store)
   // const dispatch = useDispatch()
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const checker = (param) => {
     // console.log(param.id);
     const vault = store.filter((pack) => {
-      console.log(param, pack.id)
+      // console.log(param, pack.id)
       return pack.id == param
     });
-    console.log("Result -> ", vault)
+    // console.log("Result -> ", vault)
 
-    // vault.map((item)=>{
+
     if (vault[0]) {
       if (vault[0].name === param) {
-        console.log(vault[0].name, param)
+        // console.log(vault[0].name, param)
         return true;
       }
     }
     return false;
-    // })
+
   }
 
+  const navigator = () =>{
+      store.map((item)=>{
+          dispatch(removePackage({id : item.id}))
+      })
+      navigate('/');
+  }
 
   const nodemon = checker('nodemon')
   const bcryptjs = checker('bcryptjs')
@@ -46,20 +56,25 @@ const Code = () => {
   const multer = checker('multer')
 
 
-  console.log(
-    bcryptjs,
-    body_parser,
-    colors,
-    cookie_parser,
-    cors, dotenv,
-    express_validator,
-    jsonwebtoken,
-    mongoose,
-    multer
-  );
+  // console.log(
+  //   bcryptjs,
+  //   body_parser,
+  //   colors,
+  //   cookie_parser,
+  //   cors, dotenv,
+  //   express_validator,
+  //   jsonwebtoken,
+  //   mongoose,
+  //   multer
+  // );
 
   return (
     <>
+    <button className='btn' onClick={ ()=>{
+        navigator();
+       } }>Go to reselect Packages</button>
+
+   
       <div className="codejs">
         <div className='main'>
           <h1>To create packege file </h1>
@@ -127,6 +142,11 @@ const Code = () => {
                 {dotenv && < Environment mongoose={mongoose} />}
         </div>
       </div>
+
+      <button className="down btn" onClick={ ()=>{
+        navigator();
+       } }>Go to reselect Packages</button>
+
     </>
   )
 }

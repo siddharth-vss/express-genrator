@@ -52,6 +52,27 @@ button:active{
   box-shadow: 6px 6px  hsl(212, 100%, 40%);
   transform: translate3d(10px, 10px, 10px);
 }
+
+.btn{
+  height: 40px;
+  width: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  margin-left: 10vw;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsl(212, 6%, 64%),10px 10px 5px hsl(212, 6%, 64%),15px 15px 5px hsl(212, 6%, 64%);
+  
+  border : transparent;
+}
+.down{
+  margin-top : 100px;
+  margin-bottom : 50px;
+}
+.btn:active{
+  box-shadow: 6px 6px  hsl(212, 6%, 64%);
+  transform: translate3d(10px, 10px, 10px);
+}
 /* @media only screen and (max-width: 600px) {
   
 } */

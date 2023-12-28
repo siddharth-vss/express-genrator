@@ -2,10 +2,10 @@
 
 const Formio = ({ type, name , id , label ,checked ,onChange ,value }) => {
     return (
-        <div>
+        <div >
 
-            <input type={type} name={name} checked={checked} value={value} id={id} onChange={onChange} />
-            <label>
+            <input type={type} name={name} checked={checked} value={value} id={id} onChange={onChange}  />
+            <label htmlFor={id}  >
                 {label}
             </label>
         </div>
